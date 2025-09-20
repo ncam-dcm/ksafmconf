@@ -109,14 +109,14 @@ export default function Page() {
             <span className='text-gray-700'>프로그램</span>
           </li>
           <li className='text-gray-400'>/</li>
-          <li aria-current='page' className='font-medium text-gray-900'>
+          <li aria-current='page' className='font-medium text-indigo-500'>
             행사 일정표
           </li>
         </ol>
       </nav>
-
+      {/* 
       <h1 className='mb-2 text-2xl font-bold md:text-3xl'>행사 일정표</h1>
-      <p className='mb-6 text-sm text-gray-600'>※ 세부 내용은 변경될 수 있음.</p>
+      <p className='mb-6 text-sm text-gray-600'>※ 세부 내용은 변경될 수 있음.</p> */}
 
       {/* 이미지 목록 */}
       <section className='grid gap-6'>

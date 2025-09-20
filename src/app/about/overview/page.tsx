@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Calendar, MapPin, Building2 } from 'lucide-react';
+import SectionTitle from '@/components/SectionTitle';
 export default function Page() {
   return (
     <main className='mx-auto max-w-6xl px-4 py-10'>
@@ -16,7 +17,7 @@ export default function Page() {
             <span className='text-gray-700'>학술대회 안내</span>
           </li>
           <li className='text-gray-400'>/</li>
-          <li aria-current='page' className='font-medium text-gray-900'>
+          <li aria-current='page' className='font-medium text-indigo-500'>
             학술대회 개요
           </li>
         </ol>
@@ -24,18 +25,22 @@ export default function Page() {
 
       {/* 주최/주관 */}
       <section className='mb-8 rounded-2xl border bg-white p-5 shadow-sm'>
-        <h1 className='mb-3 text-lg font-semibold'>주최/주관</h1>
-        <p className='text-gray-800'>한국농림기상학회</p>
+        <SectionTitle icon='/icon.png' as='h1' className='text-xl'>
+          주최/주관
+        </SectionTitle>
+        <p className='text-gray-800 text-lg'>- 한국농림기상학회</p>
       </section>
 
       {/* 행사 장소 */}
       <section className='mb-8 rounded-2xl border bg-white p-5 shadow-sm'>
-        <h1 className='mb-3 flex items-center gap-2 text-lg font-semibold'>
-          <MapPin className='h-5 w-5' /> 행사 장소
-        </h1>
-        <ul className='list-disc space-y-2 pl-5 text-gray-800'>
-          <li>한국농수산대학교 융합교육관</li>
-          <li>
+        <SectionTitle icon='/icon.png' as='h1' className='text-xl'>
+          행사 장소
+        </SectionTitle>
+        <ul className='list-none space-y-2 text-lg text-gray-800'>
+          <li className="relative pl-4 before:absolute before:left-0 before:content-['-']">
+            한국농수산대학교 융합교육관
+          </li>
+          <li className="relative pl-4 before:absolute before:left-0 before:content-['-']">
             웹사이트:{' '}
             <a
               href='https://www.af.ac.kr/'
@@ -50,20 +55,30 @@ export default function Page() {
 
       {/* 주제 */}
       <section className='mb-8 rounded-2xl border bg-white p-5 shadow-sm'>
-        <h1 className='mb-3 text-lg font-semibold'>주제</h1>
-        <p className='text-gray-800'>극한기상에 따른 농림분야 피해와 대책</p>
+        <SectionTitle icon='/icon.png' as='h1' className='text-xl'>
+          주제
+        </SectionTitle>
+        <p className='text-gray-800 text-lg'>- 극한기상에 따른 농림분야 피해와 대책</p>
       </section>
 
       {/* 주요 일정 */}
       <section className='rounded-2xl border bg-white p-5 shadow-sm'>
-        <h1 className='mb-3 flex items-center gap-2 text-lg font-semibold'>
-          <Calendar className='h-5 w-5' /> 주요 일정
-        </h1>
-        <ul className='list-disc space-y-2 pl-5 text-gray-800'>
-          <li>초록 1차 제출: 2025년 6월 5일</li>
-          <li>초록 연장 제출: 2025년 6월 13일</li>
-          <li>온라인 등록기간: 2025년 6월 20일</li>
-          <li>행사 기간: 2025년 6월 24-25일 (1박 2일)</li>
+        <SectionTitle icon='/icon.png' as='h1' className='text-xl'>
+          주요 일정
+        </SectionTitle>
+        <ul className='list-none space-y-2 text-lg text-gray-800'>
+          <li className="relative pl-4 before:absolute before:left-0 before:content-['-']">
+            초록 1차 제출: 2025년 6월 5일
+          </li>
+          <li className="relative pl-4 before:absolute before:left-0 before:content-['-']">
+            초록 연장 제출: 2025년 6월 13일
+          </li>
+          <li className="relative pl-4 before:absolute before:left-0 before:content-['-']">
+            온라인 등록기간: 2025년 6월 20일
+          </li>
+          <li className="relative pl-4 before:absolute before:left-0 before:content-['-']">
+            행사 기간: 2025년 6월 24-25일 (1박 2일)
+          </li>
         </ul>
       </section>
     </main>

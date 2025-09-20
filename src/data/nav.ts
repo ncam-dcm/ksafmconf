@@ -21,8 +21,8 @@ export const nav: NavItem[] = [
   {
     label: '초록제출/발표안내',
     items: [
-      { label: '초록제출 안내', href: '/submission/guide' },
-      { label: '발표 안내', href: '/submission/presentation' },
+      { label: '초록제출 안내', href: '/submission' },
+      { label: '발표 안내', href: '/submission/guideline' },
     ],
   },
   {
@@ -32,11 +32,12 @@ export const nav: NavItem[] = [
       { label: '협찬', href: '/registration/sponsorship' },
     ],
   },
-  { label: '오시는 길', href: '/venue' },
+  { label: '오시는 길', href: '/contact' },
 ];
 
 // 외부 시스템(ManuscriptLink 등) URL을 여기에 모아두면 교체가 쉽습니다.
 export const externalLinks = {
-  submission: 'https://www.manuscriptlink.com/society/ksafm/submit', // 예시 - 실제 URL로 교체
-  registration: 'https://www.manuscriptlink.com/society/ksafm/register', // 예시 - 실제 URL로 교체
+  registration:
+    'https://www.manuscriptlink.com/conferences/ksafm2025summer?reg=1&currentPageRole=author', // 예시 - 실제 URL로 교체
+  submission: 'https://www.manuscriptlink.com/conferences/ksafm2025summer?currentPageRole=author', // 예시 - 실제 URL로 교체
 };

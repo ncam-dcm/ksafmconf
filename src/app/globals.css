@@ -73,3 +73,18 @@ body {
     @apply bg-background text-foreground;
   }
 }
+@layer base {
+  html {
+    font-size: 18px;
+  } /* 기본 */
+  @media (min-width: 768px) {
+    html {
+      font-size: 17px;
+    }
+  }
+  @media (min-width: 1024px) {
+    html {
+      font-size: 18px;
+    }
+  }
+}

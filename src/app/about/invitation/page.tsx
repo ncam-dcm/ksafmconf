@@ -23,9 +23,9 @@ export default function Page() {
   오늘 학술대회가 성공적으로 마무리될 수 있도록 지혜와 열정을 모아주시고, 앞으로도 우리 모두의 학문적 성장을 위핸 노력해 주시기 부탁드립니다. 다시 한번 학술대회에 참여해주신 모든 분들게 감사드리며, 오늘 학술대회를 통해 얻은 지혜와 경험이 여러분의 삶에 큰 도움이 되기를 기원합니다.`;
 
   const signature = {
-    line1: '한국농림기상학회 (KSAFM)',
-    line2: '조직위원장 심교문', // 필요 시 직함/성명 수정
-    line3: '2025년 6월', // 필요 시 날짜 수정
+    date: '2025년 6월', // 필요 시 날짜 수정
+    organization: '사단법인 한국농림기상학회',
+    name: '회 장     심 교 문', // 필요 시 직함/성명 수정
   };
 
   return (
@@ -43,7 +43,7 @@ export default function Page() {
             <span className='text-gray-700'>학술대회 안내</span>
           </li>
           <li className='text-gray-400'>/</li>
-          <li aria-current='page' className='font-medium text-gray-900'>
+          <li aria-current='page' className='font-medium text-indigo-500'>
             초대의 말씀
           </li>
         </ol>
@@ -51,12 +51,12 @@ export default function Page() {
 
       <section className='rounded-2xl border bg-white p-6 shadow-sm'>
         <article className='prose prose-zinc max-w-none'>
-          <p className='whitespace-pre-line leading-7 text-gray-800'>{letter}</p>
+          <p className='whitespace-pre-line leading-7 text-black'>{letter}</p>
         </article>
-        <div className='mt-8 text-right text-gray-800'>
-          <p>{signature.line1}</p>
-          <p className='mt-1 font-semibold'>{signature.line2}</p>
-          <p className='mt-1 text-sm text-gray-600'>{signature.line3}</p>
+        <div className='mt-8 space-y-3 text-right text-black text-lg'>
+          <p className=''>{signature.date}</p>
+          <p className=''>{signature.organization}</p>
+          <p className='whitespace-pre-wrap'>{signature.name}</p>
         </div>
       </section>
     </main>
