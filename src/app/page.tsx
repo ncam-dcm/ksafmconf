@@ -121,7 +121,7 @@ export default function Page() {
           {/* 우측 Important Dates 박스 */}
           <div className='rounded-[14px] border bg-white p-5 shadow-sm'>
             <h2 className='mb-3 flex items-center gap-2 text-[16px] md:text-xl font-semibold'>
-              <Calendar className='h-5 w-5' /> 중요 일정
+              <Calendar className='h-5 w-5' />주요 일정
             </h2>
             <ul className='space-y-3'>
               {home.importantDates.map((d) => (

@@ -48,7 +48,7 @@ export default function NavBar() {
     <header className='sticky top-0 z-50 border-b bg-white/80 backdrop-blur'>
       <div ref={navRef} className='mx-auto flex max-w-6xl items-center justify-between px-4 py-3'>
         <Link href='/' className='text-xl font-bold tracking-tight' aria-label='KSAFM'>
-          KSAFM 2025
+          한국농림기상학회 학술대회
         </Link>
 
         {/* 데스크톱 네비 */}

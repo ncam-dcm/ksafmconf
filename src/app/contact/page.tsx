@@ -16,19 +16,19 @@ export default function Page() {
       </SectionTitle>
       <section className='space-y-5'>
         <div>
-          <p className='text-lg'>- 주소 : 전남 여수시 오동도로 61-13 여수베네치아호텔&리조트</p>
+          <p className='text-lg'>- 주소 : 전남 여수시 오동도로 61-13 여수베네치아호텔&스위트</p>
           <p className='text-lg'>- 전화 : 061-664-0001</p>
         </div>
 
         {/* 지도 */}
         <LocationMap
-          title='여수베네치아호텔&리조트'
+          title='여수베네치아호텔&스위트'
           point={{ lat: 34.74577866287442, lng: 127.75189305228245 }}
           initLevel={4}
           bigView={{
             srcid: 1748504512,
             itemId: 1748504512,
-            q: '여수베네치아호텔&리조트',
+            q: '여수베네치아호텔&스위트',
             urlX: 672126.0000000028,
             urlY: 347876.00000000326,
             mapType: 'TYPE_MAP',
@@ -44,7 +44,7 @@ export default function Page() {
           <div>
             <h3 className='mb-2 text-sm font-semibold'>자가용</h3>
             <ul className='list-disc space-y-1 pl-5 text-sm text-gray-700'>
-              <li>내비게이션 검색어: “여수베네치아호텔&리조트”</li>
+              <li>내비게이션 검색어: “여수베네치아호텔&스위트”</li>
               <li>주차 위치/요금은 행사 공지에 따릅니다.</li>
             </ul>
           </div>

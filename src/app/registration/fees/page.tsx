@@ -88,7 +88,7 @@ export default function Page() {
             <a
               href='mailto:ksafm2@gmail.com'
               className='underline underline-offset-2 text-blue-600 hover:text-blue-700'>
-              (ksafm2@gmail.com)
+              (ksafm1@gmail.com)
             </a>
             으로 문의주시기 바랍니다.
           </li>
