@@ -35,7 +35,7 @@ export default function Page() {
 
       {/* 행사 장소 */}
       <section className="mb-8 rounded-2xl border bg-white p-5 shadow-sm">
-        <SectionTitle icon="ksafmconf/icon.png" as="h1" className="text-xl">
+        <SectionTitle icon={ICON_IMAGE} as="h1" className="text-xl">
           행사 장소
         </SectionTitle>
         <ul className="list-none space-y-2 text-lg text-gray-800">
