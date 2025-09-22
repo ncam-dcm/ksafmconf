@@ -1,5 +1,6 @@
 // FILE: src/components/SectionTitle.tsx
 import clsx from 'clsx';
+import { asset } from "@/lib/paths";
 
 type Props = {
   icon: string; // "/icon/png/xxx.png"
@@ -22,7 +23,7 @@ export default function SectionTitle({
   return (
     <Tag className={clsx('mb-3 flex items-center gap-1 align-middle font-semibold', className)}>
       <img
-        src={icon}
+        src={asset(icon)}               // ← 여기! 절대경로를 안전하게 변환
         alt={alt}
         width={size}
         height={size}

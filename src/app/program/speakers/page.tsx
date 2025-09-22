@@ -1,19 +1,21 @@
 // FILE: src/app/speakers/page.tsx
-import Link from 'next/link';
-import { Mail, Building2 } from 'lucide-react';
-import { SPEAKERS, type Speaker } from '@/data/program';
-import SectionTitle from '@/components/SectionTitle';
+import Link from "next/link";
+import { Mail, Building2 } from "lucide-react";
+import { SPEAKERS, type Speaker } from "@/data/program";
+import SectionTitle from "@/components/SectionTitle";
+import { ICON_IMAGE } from "@/data/source_path";
+
 type AnySpeaker = (typeof SPEAKERS)[number];
 
 // 연사 배열 -> { 분야명: 연사[] } 로 그룹핑 (field | fields 둘 다 지원)
 function groupByField(list: AnySpeaker[]) {
   const groups: Record<string, AnySpeaker[]> = {};
-  const FALLBACK = '기타(Etc)';
+  const FALLBACK = "기타(Etc)";
 
   for (const sp of list) {
     const fields: string[] = Array.isArray((sp as any).fields)
       ? ((sp as any).fields as string[])
-      : typeof (sp as any).field === 'string' && (sp as any).field.trim().length
+      : typeof (sp as any).field === "string" && (sp as any).field.trim().length
       ? [(sp as any).field as string]
       : [];
 
@@ -27,7 +29,7 @@ function groupByField(list: AnySpeaker[]) {
 
   // 각 그룹 내부 정렬(이름 기준)
   for (const k of Object.keys(groups)) {
-    groups[k].sort((a, b) => (a.name || '').localeCompare(b.name || '', 'ko'));
+    groups[k].sort((a, b) => (a.name || "").localeCompare(b.name || "", "ko"));
   }
   return groups;
 }
@@ -35,24 +37,26 @@ function groupByField(list: AnySpeaker[]) {
 export default function Page() {
   const hasData = SPEAKERS.length > 0;
   const groups = hasData ? groupByField(SPEAKERS) : {};
-  const groupNames = Object.keys(groups).sort((a, b) => a.localeCompare(b, 'ko'));
+  const groupNames = Object.keys(groups).sort((a, b) =>
+    a.localeCompare(b, "ko")
+  );
 
   return (
-    <main className='mx-auto max-w-6xl px-4 py-10'>
+    <main className="mx-auto max-w-6xl px-4 py-10">
       {/* breadcrumb */}
-      <nav className='mb-6 text-sm text-gray-600' aria-label='breadcrumb'>
-        <ol className='flex flex-wrap items-center gap-2'>
+      <nav className="mb-6 text-sm text-gray-600" aria-label="breadcrumb">
+        <ol className="flex flex-wrap items-center gap-2">
           <li>
-            <Link href='/' className='hover:underline'>
+            <Link href="/" className="hover:underline">
               홈
             </Link>
           </li>
-          <li className='text-gray-400'>/</li>
+          <li className="text-gray-400">/</li>
           <li>
-            <span className='text-gray-700'>프로그램</span>
+            <span className="text-gray-700">프로그램</span>
           </li>
-          <li className='text-gray-400'>/</li>
-          <li aria-current='page' className='font-medium text-indigo-500'>
+          <li className="text-gray-400">/</li>
+          <li aria-current="page" className="font-medium text-indigo-500">
             초청 연사
           </li>
         </ol>
@@ -61,7 +65,7 @@ export default function Page() {
       {/* <h1 className='mb-8 text-2xl font-bold md:text-3xl'>초청 연사 (Speakers)</h1> */}
 
       {!hasData ? (
-        <div className='rounded-2xl border bg-white p-6 text-sm text-gray-600'>
+        <div className="rounded-2xl border bg-white p-6 text-sm text-gray-600">
           연사 정보가 아직 등록되지 않았습니다. <br />
         </div>
       ) : (
@@ -80,14 +84,21 @@ export default function Page() {
 
           {/* 분야별 섹션 */}
           {groupNames.map((g) => (
-            <section key={g} id={`field-${encodeURIComponent(g)}`} className='mb-10'>
-              <SectionTitle icon='/icon.png' as='h1' className='text-xl'>
+            <section
+              key={g}
+              id={`field-${encodeURIComponent(g)}`}
+              className="mb-10"
+            >
+              <SectionTitle icon={ICON_IMAGE} as="h1" className="text-xl">
                 {g}
               </SectionTitle>
-              <div className='grid gap-6 sm:grid-cols-1 lg:grid-cols-2'>
+              <div className="grid gap-6 sm:grid-cols-1 lg:grid-cols-2">
                 {groups[g].map((sp: Speaker) => (
-                  <article key={sp.name} className='rounded-2xl border bg-white p-4 shadow-sm'>
-                    <div className='m-1 flex items-center gap-3'>
+                  <article
+                    key={sp.name}
+                    className="rounded-2xl border bg-white p-4 shadow-sm"
+                  >
+                    <div className="m-1 flex items-center gap-3">
                       {/* {'photo' in sp && sp.photo ? (
                         <img
                           src={sp.photo as string}
@@ -100,13 +111,13 @@ export default function Page() {
                         </div>
                       )} */}
                       <div>
-                        <h3 className='text-base font-semibold text-gray-900'>
+                        <h3 className="text-base font-semibold text-gray-900">
                           - {sp.name}
                           <span> </span>
                           {sp.title}
                         </h3>
-                        {'affiliation' in sp && sp.affiliation && (
-                          <p className='mt-0.5 items-center gap-1 text-base text-gray-900'>
+                        {"affiliation" in sp && sp.affiliation && (
+                          <p className="mt-0.5 items-center gap-1 text-base text-gray-900">
                             - {sp.affiliation as string}
                           </p>
                         )}

@@ -5,9 +5,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next export",
     "predeploy": "cross-env NEXT_PUBLIC_KAKAO_APP_KEY=$NEXT_PUBLIC_KAKAO_APP_KEY npm run build && npm run export",
-    "deploy": "gh-pages -d out -b gh-pages"
+    "deploy": "gh-pages -d out -b gh-pages -t true"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
